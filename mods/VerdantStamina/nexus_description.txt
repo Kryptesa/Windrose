@@ -1,0 +1,49 @@
+[size=4][b]Description[/b][/size]
+
+Verdant Stamina replaces Windrose's stamina indicator with smooth, olive-green concentric rings. Permanent capacity and equipped-item bonuses appear in green; temporary food and buff capacity appears in a separate, smaller yellow wheel.
+
+This is an alpha release. It changes the client HUD, not stamina values, regeneration, saves or server state.
+
+Source code and bug reports: [url=https://github.com/Kryptesa/Windrose]GitHub[/url].
+
+[size=4][b]Main features[/b][/size]
+[list]
+[*]Smooth draining and regeneration with continuous partial arcs.
+[*]Additional green rings for permanent stamina capacity.
+[*]A separate yellow wheel for temporary stamina capacity; yellow is spent first in the display.
+[*]A gradual green-to-orange warning below 30% stamina.
+[*]Paint, hatch and flat surface styles, configurable scale and smoothing.
+[*]F8 toggles the mod, F9 requests diagnostics and F10 reloads settings and scripts.
+[/list]
+
+[size=4][b]Requirements[/b][/size]
+
+Windows Windrose client and [url=https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v4.0.0]UE4SS 4.0.0[/url]. Development targeted an inspected UE 5.6.1 client. Compatibility with other game builds or loader versions is not established. UE4SS is a separate dependency and is not bundled.
+
+[size=4][b]Installation[/b][/size]
+
+1. Close the game.
+2. Install UE4SS in Windrose/R5/Binaries/Win64 following its instructions.
+3. In ue4ss/UE4SS-settings.ini, set MajorVersion = 5 and MinorVersion = 6 under [EngineVersionOverride]. Preserve other loader settings.
+4. Extract the VerdantStamina ZIP into Windrose/R5/Binaries/Win64. The resulting path must be ue4ss/Mods/VerdantStamina/Scripts/main.lua. The package includes enabled.txt.
+5. Launch the game and load a save.
+
+If you used the development version named WindroseStamina, remove its old folder from ue4ss/Mods before installing. Keep only one copy of the mod.
+
+[size=4][b]Settings and updates[/b][/size]
+
+Edit ue4ss/Mods/VerdantStamina/Scripts/config.lua and press F10 to apply changes. Use surface_style = "paint", "hatch" or "flat"; ui_scale controls overall size and smoothing_seconds controls easing. Geometry settings require regenerated masks and should be left at their defaults in the downloaded package.
+
+For updates, close the game, back up config.lua and replace the mod files. Review changed settings before restoring custom values. To uninstall, close the game and remove only ue4ss/Mods/VerdantStamina. Retain UE4SS if other mods use it.
+
+[size=4][b]Known limitations[/b][/size]
+
+The renamed distribution still needs its final in-game installation check. Death/respawn, multiplayer and long sessions remain unverified. Other mods that replace the same stamina widget may conflict. If native stamina-source accounting cannot be verified, the mod retains the original HUD and retries. This is a display replacement, not a change to food or buff mechanics.
+
+[size=4][b]Troubleshooting and bug reports[/b][/size]
+
+Check the installation path and that UE4SS loads. Press F9 in a loaded world, then attach the relevant ue4ss/UE4SS.log, config.lua, mod version, game build, UE4SS version and a list of other mods. Include reproduction steps and a screenshot or short video. Report problems in the Nexus Bugs tab or [url=https://github.com/Kryptesa/Windrose/issues]GitHub Issues[/url]. Review logs for personal information before sharing.
+
+[size=4][b]Credits and permissions[/b][/size]
+
+Thanks to the UE4SS developers. Mod code and procedural ring masks are distributed under the MIT license included in the ZIP. UE4SS is not included and retains its own license. Developed with generative AI assistance; use the applicable AI-Generated Content tag on Nexus.

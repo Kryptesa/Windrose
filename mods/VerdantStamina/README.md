@@ -2,6 +2,10 @@
 
 Client HUD mod, alpha: `0.1.0-alpha.3`. Built for the inspected Windrose UE 5.6.1 client and UE4SS 4.0.0.
 
+Distributed under the [MIT license](LICENSE). [Release notes](release_notes.md),
+[Nexus description (BBCode)](nexus_description.txt) and the repository's
+[release guide](../../docs/releases.md) document publication preparation.
+
 - Smooth stamina drain/regeneration, olive green and concentric rings. The primary stroke is 30% thicker than the previous 9px stroke; the second and third are derived automatically at one half and one third (11.7 / 5.85 / 3.9 logical pixels). The primary's outer diameter stays fixed; thickening grows inward.
 - `surface_style = "paint"` applies the worn-paint surface selected by the user. `"hatch"` selects dry hatching; `"flat"` restores the plain fill. All three are packaged and can be switched with a config edit and reload. The grain remains stationary while clipping planes rotate, thinner rings use a lighter texture, and the feathered endpoint uses the mean pigment tone. Geometry, alpha coverage, green/yellow hues and the low-stamina orange transition are preserved.
 - Below 30% total stamina, the fill smoothly warms from green through gold to orange, reaching full orange by 10%. Changes ease over time in both directions, including a sudden drop or regeneration. Thresholds and easing live in `Scripts/config.lua`.

@@ -29,3 +29,7 @@ See the mod README for installation and remaining live validation limits. When m
 Update each mod's `VERSION` and changelog for its own release. Package and installer read `VERSION`; keep runtime banners and documentation in sync. Release tags use `<ModName>/v<version>` (for example `VerdantStamina/v0.1.0-alpha.3`). Tags identify source snapshots; publication of downloadable releases is separate.
 
 New mods belong in their own `mods/<ModName>/` directory and do not change other mods' versions. Game assets, saves, logs, credentials and third-party executables must stay outside tracked files.
+
+Release preparation uses the manual [Prepare release workflow](.github/workflows/prepare-release.yml).
+See [the release guide](docs/releases.md) for tagging, validation and draft review.
+Verdant Stamina is [MIT licensed](mods/VerdantStamina/LICENSE); future mods choose their own license.

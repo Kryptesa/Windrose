@@ -17,11 +17,12 @@ def build():
         for path in files:
             z.write(path, "ue4ss/Mods/" + path.relative_to(ROOT / "mods").as_posix())
         z.writestr("ue4ss/Mods/VerdantStamina/enabled.txt", "")
-        z.write(ROOT / "mods/VerdantStamina/README.md", "README.md")
+        for name in ("README.md", "LICENSE", "release_notes.md"):
+            z.write(ROOT / "mods/VerdantStamina" / name, name)
         z.writestr("source-manifest.json", json.dumps(manifest, indent=2) + "\n")
     with zipfile.ZipFile(target) as z:
         assert z.testzip() is None
-        assert len(z.namelist()) == len(files) + 3
+        assert len(z.namelist()) == len(files) + 5
         assert all("extracted" not in n and not n.endswith((".dll", ".exe", ".uasset")) for n in z.namelist())
     print(target)
     print("SHA256", hashlib.sha256(target.read_bytes()).hexdigest())
