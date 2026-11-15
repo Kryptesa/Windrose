@@ -4,7 +4,7 @@ Monorepo for client mods for Windrose. Each mod has independent versions and rel
 
 | Mod | Description | Version |
 | --- | --- | --- |
-| [Verdant Stamina](mods/VerdantStamina/README.md) | Smooth concentric stamina HUD with a separate temporary reserve | 0.1.0-alpha.3 |
+| [Verdant Stamina](mods/VerdantStamina/README.md) | Smooth concentric stamina HUD with a separate temporary reserve | 0.1.0-alpha.4 |
 
 ## Layout
 
@@ -26,7 +26,7 @@ See the mod README for installation and remaining live validation limits. When m
 
 ## Versioning
 
-Update each mod's `VERSION` and changelog for its own release. Package and installer read `VERSION`; keep runtime banners and documentation in sync. Release tags use `<ModName>/v<version>` (for example `VerdantStamina/v0.1.0-alpha.3`). Tags identify source snapshots; publication of downloadable releases is separate.
+Update each mod's `VERSION` and changelog for its own release. Package and installer read `VERSION`; keep runtime banners and documentation in sync. Release tags use `<ModName>/v<version>` (for example `VerdantStamina/v0.1.0-alpha.4`). Tags identify source snapshots; publication of downloadable releases is separate.
 
 New mods belong in their own `mods/<ModName>/` directory and do not change other mods' versions. Game assets, saves, logs, credentials and third-party executables must stay outside tracked files.
 

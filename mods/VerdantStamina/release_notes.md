@@ -1,6 +1,12 @@
-# Verdant Stamina 0.1.0-alpha.3
+# Verdant Stamina 0.1.0-alpha.4
 
-Initial alpha baseline in the Windrose monorepo, renamed from WindroseStamina.
+Release packaging update for the renamed Verdant Stamina alpha. HUD behavior is unchanged.
+
+## Changed
+
+- Include the MIT license and release notes in the installable ZIP.
+- Add Nexus page materials and a manual Prepare release workflow.
+- Validate version metadata, archive contents and source hashes before draft creation.
 
 ## Features
 
@@ -19,8 +25,8 @@ keep only `VerdantStamina`. See README.md for full instructions and removal.
 
 ## Validation and compatibility
 
-All 34 offline Lua model and native-boundary contract tests passed after the
-rename. The package was built and its source-manifest hashes checked locally.
+All 34 offline Lua model and native-boundary contract tests and 3 release-validator
+tests passed locally. The package and its source-manifest hashes were checked.
 These tests do not establish actual engine marshalling or multiplayer behavior.
 The release workflow repeats the offline checks against the selected tag.
 

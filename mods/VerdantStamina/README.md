@@ -1,6 +1,6 @@
 # Verdant Stamina
 
-Client HUD mod, alpha: `0.1.0-alpha.3`. Built for the inspected Windrose UE 5.6.1 client and UE4SS 4.0.0.
+Client HUD mod, alpha: `0.1.0-alpha.4`. Built for the inspected Windrose UE 5.6.1 client and UE4SS 4.0.0.
 
 Distributed under the [MIT license](LICENSE). [Release notes](release_notes.md),
 [Nexus description (BBCode)](nexus_description.txt) and the repository's
@@ -30,7 +30,7 @@ Extract the mod ZIP into `Windrose/R5/Binaries/Win64` so `ue4ss/Mods/VerdantStam
 
 F8 toggles the mod and restores the original paint when disabled. F9 requests a bounded diagnostic in `ue4ss/UE4SS.log`. F10 reloads the Lua modules, restoring and rebuilding the rings. Settings, including colors and smoothing, live in `Scripts/config.lua`; F10 applies edits without a game restart. The development installer updates `Scripts/reload.txt` last to request the same reload automatically.
 
-The scheduler retains the alpha.2 game-thread design and invalidates UE4SS's separate compiled-module cache for this mod; the new app also clears its new source modules from `package.loaded`. Subsequent source updates can hot-reload without a game restart. The startup banner reports alpha.3. The rename requires installing the new mod while the game is closed and removing the old WindroseStamina folder first to avoid running both mods. `python mods/VerdantStamina/dev/check_runtime.py` checks the latest live renderer revision, geometry and verified native source accounting; installed file hashes alone do not establish which revision is running.
+The scheduler retains the alpha.2 game-thread design and invalidates UE4SS's separate compiled-module cache for this mod; the new app also clears its new source modules from `package.loaded`. Subsequent source updates can hot-reload without a game restart. The startup banner reports alpha.4. The rename requires installing the new mod while the game is closed and removing the old WindroseStamina folder first to avoid running both mods. `python mods/VerdantStamina/dev/check_runtime.py` checks the latest live renderer revision, geometry and verified native source accounting; installed file hashes alone do not establish which revision is running.
 
 To remove only this mod, close the game and remove `ue4ss/Mods/VerdantStamina`. Remove loader files only if no other mod uses them.
 

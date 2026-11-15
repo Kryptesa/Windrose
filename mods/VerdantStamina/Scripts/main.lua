@@ -30,7 +30,7 @@ local function reload()
         end
     end
     local ok,result=pcall(require,"app")
-    if ok then app=result;log("0.1.0-alpha.3 ready; renderer="..tostring(app.revision).."; F8 toggle / F9 diagnostics / F10 reload")
+    if ok then app=result;log("0.1.0-alpha.4 ready; renderer="..tostring(app.revision).."; F8 toggle / F9 diagnostics / F10 reload")
     else log("Could not load mod; original HUD retained. "..tostring(result)) end
     reload_requested=false
 end
